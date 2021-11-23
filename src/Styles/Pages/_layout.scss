@@ -1,0 +1,98 @@
+.layout-wrapper {
+  .sidebar {
+    width: 225px;
+    height: 100vh;
+    background: transparent
+      linear-gradient(
+        169deg,
+        var(--unnamed-color-343379) 0%,
+        var(--unnamed-color-089752) 100%
+      )
+      0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(169deg, #343379 0%, #089752 100%) 0%
+      0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #0000002b;
+    border-radius: 0px 20px 20px 0px;
+    opacity: 1;
+
+    ul {
+      margin-top: 10px;
+    }
+    li {
+      margin-bottom: 20px;
+      margin-left: 16px;
+    }
+
+    .logo-container {
+      width: 225px;
+      height: 121px;
+      background: transparent linear-gradient(140deg, #ffffff 0%, #f3f3f3 100%)
+        0% 0% no-repeat padding-box;
+      border-radius: 0px 20px 0px 0px;
+      opacity: 1;
+      padding: 15px 62px 22px 63px;
+    }
+    .sibar-link-btn {
+        width: 212px;
+        height: 30px;
+        // background: transparent
+        //   linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
+        //   0% no-repeat padding-box;
+        // background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
+        //   0% 0% no-repeat padding-box;
+        // box-shadow: 0px 0px 20px #0000002b;
+        // border-radius: 4px 0px 0px 4px;
+        // opacity: 1;
+        text-decoration: none;
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        padding-left: 13px;
+        padding-top: 4px;
+  
+      }
+    .active {
+      width: 212px;
+      height: 30px;
+      background: transparent
+        linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
+        0% no-repeat padding-box;
+      background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
+        0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 20px #0000002b;
+      border-radius: 4px 0px 0px 4px;
+      opacity: 1;
+    }
+    .sibar-link-btn:hover {
+        width: 212px;
+        height: 30px;
+        background: transparent
+          linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
+          0% no-repeat padding-box;
+        background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
+          0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 20px #0000002b;
+        border-radius: 4px 0px 0px 4px;
+        opacity: 1;
+        text-decoration: none;
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        padding-left: 13px;
+        padding-top: 4px;
+  
+      }
+  }
+
+  //----------------  topbar ---------------------------
+  .top-bar {
+    height: 63px;
+    background: #f8f8f8 0% 0% no-repeat padding-box;
+    padding: 23px 15px 12px 15px;
+    .ant-dropdown-link,a{
+        color: #04041C;
+        text-decoration: none;
+        font-size: 14px;
+    }
+  }
+}
