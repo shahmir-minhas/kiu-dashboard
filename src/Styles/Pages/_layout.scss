@@ -14,6 +14,8 @@
     box-shadow: 0px 0px 20px #0000002b;
     border-radius: 0px 20px 20px 0px;
     opacity: 1;
+    position: fixed;
+    z-index: 2;
 
     ul {
       margin-top: 10px;
@@ -33,24 +35,23 @@
       padding: 15px 62px 22px 63px;
     }
     .sibar-link-btn {
-        width: 212px;
-        height: 30px;
-        // background: transparent
-        //   linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
-        //   0% no-repeat padding-box;
-        // background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
-        //   0% 0% no-repeat padding-box;
-        // box-shadow: 0px 0px 20px #0000002b;
-        // border-radius: 4px 0px 0px 4px;
-        // opacity: 1;
-        text-decoration: none;
-        display: block;
-        color: #ffffff;
-        font-size: 14px;
-        padding-left: 13px;
-        padding-top: 4px;
-  
-      }
+      width: 212px;
+      height: 30px;
+      // background: transparent
+      //   linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
+      //   0% no-repeat padding-box;
+      // background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
+      //   0% 0% no-repeat padding-box;
+      // box-shadow: 0px 0px 20px #0000002b;
+      // border-radius: 4px 0px 0px 4px;
+      // opacity: 1;
+      text-decoration: none;
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      padding-left: 13px;
+      padding-top: 4px;
+    }
     .active {
       width: 212px;
       height: 30px;
@@ -64,35 +65,54 @@
       opacity: 1;
     }
     .sibar-link-btn:hover {
-        width: 212px;
-        height: 30px;
-        background: transparent
-          linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
-          0% no-repeat padding-box;
-        background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
-          0% 0% no-repeat padding-box;
-        box-shadow: 0px 0px 20px #0000002b;
-        border-radius: 4px 0px 0px 4px;
-        opacity: 1;
-        text-decoration: none;
-        display: block;
-        color: #ffffff;
-        font-size: 14px;
-        padding-left: 13px;
-        padding-top: 4px;
-  
-      }
+      width: 212px;
+      height: 30px;
+      background: transparent
+        linear-gradient(289deg, #2d2ba8 0%, var(--unnamed-color-089752) 100%) 0%
+        0% no-repeat padding-box;
+      background: transparent linear-gradient(289deg, #2d2ba8 0%, #089752 100%)
+        0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 20px #0000002b;
+      border-radius: 4px 0px 0px 4px;
+      opacity: 1;
+      text-decoration: none;
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      padding-left: 13px;
+      padding-top: 4px;
+    }
   }
 
   //----------------  topbar ---------------------------
   .top-bar {
     height: 63px;
     background: #f8f8f8 0% 0% no-repeat padding-box;
-    padding: 23px 15px 12px 15px;
-    .ant-dropdown-link,a{
-        color: #04041C;
-        text-decoration: none;
-        font-size: 14px;
+    padding: 21px 26px 12px 15px;
+    position: fixed;
+    width: 100%;
+    padding-left: 254px;
+    z-index: 1;
+
+    .ant-dropdown-link,
+    a {
+      color: #04041c;
+      text-decoration: none;
+      font-size: 14px;
     }
+    .ant-btn {
+      width: 94px;
+      height: 34px;
+      background: #eeeefb 0% 0% no-repeat padding-box;
+      border-radius: 4px;
+      opacity: 1;
+      font-size: 14px;
+    }
+  }
+  hr {
+    width: 1057px;
+  //   height: 0px;
+    border: 1px solid #e6e6e6;
+    opacity: 1;
   }
 }

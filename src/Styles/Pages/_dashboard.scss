@@ -1,0 +1,175 @@
+// ------------ MIXINS
+@mixin cardHeading {
+  font-size: 16px;
+  color: #04041c;
+}
+@mixin cardPara {
+  color: #04041c;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+@mixin cardCreator {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #e3e3e3;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+// ----------------SASS
+.dashboard-wrapper {
+  padding: 79px 24px 0 254px;
+  background: #f8f8f8 0% 0% no-repeat padding-box;
+  height: 100%;
+  h6 {
+    font-size: 14px;
+    color: #04041c;
+    // font-weight: bold;
+  }
+  .card-student {
+    // width: 258px;
+    height: 123px;
+    @include cardCreator;
+    margin-right: 20px;
+    padding: 14px 0px 0 24px;
+    h6 {
+      @include cardHeading;
+    }
+    p {
+      @include cardPara;
+    }
+
+    span {
+      font-size: 14px;
+      color: #686874;
+    }
+  }
+  .card-amount {
+    // width: 488px;
+    height: 123px;
+    @include cardCreator;
+    padding: 14px 0 0 27px;
+    margin-right: 8px;
+    h6 {
+      @include cardHeading;
+    }
+    p {
+      @include cardPara;
+    }
+
+    span {
+      font-size: 14px;
+      color: #686874;
+    }
+  }
+  .vertical-line {
+    width: 1px;
+    background-color: gray;
+    height: 60px;
+  }
+  .card-scholarship {
+    // width: 305px;
+    height: 219px;
+    @include cardCreator;
+    padding: 15px 15px 10px 15px;
+    margin-top: 25px;
+
+    h6 {
+      @include cardHeading;
+    }
+    p {
+      @include cardPara;
+    }
+
+    span {
+      font-size: 14px;
+      color: #686874;
+    }
+    tr {
+      .ant-table-cell {
+        font-size: 10px;
+        color: #04041c;
+        padding: 9px 0px;
+      }
+    }
+    thead {
+      .ant-table-cell {
+        font-size: 10px;
+        color: #686874;
+        padding: 15px 0 5px 0;
+      }
+    }
+  }
+  .card-colleges {
+    // width: 305px;
+    height: 295px;
+    @include cardCreator;
+    padding: 15px 15px 10px 15px;
+    margin-top: 25px;
+
+    h6 {
+      @include cardHeading;
+    }
+    p {
+      @include cardPara;
+    }
+  }
+  .card-gender {
+    // width: 305px;
+    height: 237px;
+    @include cardCreator;
+    padding: 15px 15px 10px 15px;
+    margin-top: 25px;
+
+    h6 {
+      @include cardHeading;
+    }
+    p {
+      @include cardPara;
+    }
+  }
+  .chart {
+    height: 391px;
+    @include cardCreator;
+    padding: 20px 61px 0 21px;
+    margin-right: 8px;
+
+    h6 {
+      @include cardHeading;
+    }
+    p {
+      font-size: 12px;
+      color: #686874;
+    }
+    .green-circle {
+      width: 10px;
+      height: 10px;
+      background: #089752f2 0% 0% no-repeat padding-box;
+      opacity: 1;
+      // background-color: #343379;
+    }
+
+    .blue-circle {
+      width: 10px;
+      height: 10px;
+      background: var(--unnamed-color-343379) 0% 0% no-repeat padding-box;
+      background: #343379 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+  }
+  .bar-chart {
+    height: 528px;
+    @include cardCreator;
+    padding: 20px 61px 0 21px;
+    margin-right: 8px;
+
+    h6 {
+      @include cardHeading;
+    }
+    a {
+      font-size: 12px;
+      color: #343379;
+    }
+  }
+}

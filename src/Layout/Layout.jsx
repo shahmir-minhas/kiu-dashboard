@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, Dropdown } from "antd";
+import { Menu, Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 import Logo from "../Assets/kiu_logo.png";
@@ -16,13 +16,13 @@ import "../Styles/Pages/_layout.scss";
 
 const Layout = (props) => {
   const sidebarLinks = [
-    { icon: HomeIcon, title: "Dashboard", url: "/" },
+    { icon: HomeIcon, title: "Dashboard", url: "/home" },
     {
       icon: GraduationCap,
       title: "Studying Students",
       url: "/studying-students",
     },
-    { icon: StdGraCap, title: "Features", url: "/graduate-students" },
+    { icon: StdGraCap, title: "Graduate Students", url: "/graduate-students" },
     {
       icon: AcademicCalinder,
       title: "Academic Calendar",
@@ -71,28 +71,28 @@ const Layout = (props) => {
           </div>
         </aside>
 
-        <div className="">
-          <div className="top-bar d-flex justify-content-between flex-grow-1">
-            <div className="d-flex">
-              <img src={Profile} alt="" className="me-2" />
-              <h5 className="me-5">Hi, Shahmir!</h5>
-              <div className="">
-                <Dropdown overlay={menu} trigger={["click"]}>
-                  <a
-                    className="ant-dropdown-link"
-                    //   onClick={(e) => e.preventDefault()}
-                  >
-                    English <DownOutlined />
-                  </a>
-                </Dropdown>
-              </div>
+        <div className="top-bar d-flex justify-content-between flex-grow-1">
+          <div className="d-flex">
+            <img src={Profile} alt="" className="me-2" />
+            <h5 className="me-5">Hi, Shahmir!</h5>
+            <div className="">
+              <Dropdown overlay={menu} trigger={["click"]}>
+                <div
+                  className="ant-dropdown-link"
+                  //   onClick={(e) => e.preventDefault()}
+                >
+                  English <DownOutlined />
+                </div>
+              </Dropdown>
             </div>
-            <div>
+          </div>
+          <div>
+            <Button>
               <span className="me-2">
                 <img src={Logout} alt="" />
               </span>
-              logout
-            </div>
+              Logout
+            </Button>
           </div>
         </div>
       </nav>
