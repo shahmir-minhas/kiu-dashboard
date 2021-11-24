@@ -9,20 +9,6 @@ const { Search } = Input;
 const { Option } = Select;
 
 const StudyingStudents = () => {
-  const menu = (
-    <div className="filter-dropdown">
-      <p>CGPA Range</p>
-      <Select defaultValue="Jack">
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-        <Option value="disabled" disabled>
-          Disabled
-        </Option>
-        <Option value="Yiminghe">yiminghe</Option>
-      </Select>
-    </div>
-  );
-
   const dataSource = [
     {
       key: "1",
@@ -158,7 +144,30 @@ const StudyingStudents = () => {
       align: "right",
     },
   ];
-
+  
+  const menu = (
+    <div className="filter-dropdown">
+      <p>CGPA Range</p>
+      <h6>Scholarship</h6>
+      <Select defaultValue="Scholarship">
+        <Option value="jack">Jack</Option>
+        <Option value="lucy">Lucy</Option>
+        <Option value="Yiminghe">yiminghe</Option>
+      </Select>
+      <h6>Country</h6>
+      <Select defaultValue="Saudia Arabia">
+        <Option value="jack">Jack</Option>
+        <Option value="lucy">Lucy</Option>
+        <Option value="Yiminghe">yiminghe</Option>
+      </Select>
+      <h6>Major</h6>
+      <Select defaultValue="Islamic Sharia">
+        <Option value="jack">Jack</Option>
+        <Option value="lucy">Lucy</Option>
+        <Option value="Yiminghe">yiminghe</Option>
+      </Select>
+    </div>
+  );
   return (
     <React.Fragment>
       <div className="studying-students-wrapper">
@@ -167,10 +176,11 @@ const StudyingStudents = () => {
           <div className="d-flex justify-content-between">
             <div className="d-flex">
               <h6 className="me-4">
-                Students enrolled: <span className="ms-2">{dataSource.length}</span>
+                Students enrolled:{" "}
+                <span className="ms-2">{dataSource.length}</span>
               </h6>
 
-              <Dropdown overlay={menu}>
+              <Dropdown overlay={menu} trigger={["click"]}>
                 <Button className="btn-filter ant-dropdown-link">
                   Filter
                   <FilterIcon className="ms-2" />

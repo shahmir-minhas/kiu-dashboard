@@ -34,14 +34,14 @@ const Layout = (props) => {
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Link to="/">Item </Link>
+        <Link to="/home">English </Link>
       </Menu.Item>
       <Menu.Item key="1">
-        <Link to="/">Item </Link>
+        <Link to="/">Urdu</Link>
       </Menu.Item>
       {/* <Menu.Divider /> */}
       <Menu.Item key="3">
-        <Link to="/">Item </Link>
+        <Link to="/">Arabic </Link>
       </Menu.Item>
     </Menu>
   );

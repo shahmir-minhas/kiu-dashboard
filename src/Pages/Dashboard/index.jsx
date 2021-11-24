@@ -37,6 +37,27 @@ const Index = () => {
       totalAmount: "1,243,254",
       amountSpent: "132,654",
     },
+    {
+      key: "4",
+      program: "Demo",
+      student: 15,
+      totalAmount: "1,243,254",
+      amountSpent: "132,654",
+    },
+    {
+      key: "4",
+      program: "Demo",
+      student: 15,
+      totalAmount: "1,243,254",
+      amountSpent: "132,654",
+    },
+    {
+      key: "4",
+      program: "Demo",
+      student: 15,
+      totalAmount: "1,243,254",
+      amountSpent: "132,654",
+    },
   ];
   // columns in table
   const columns = [
@@ -150,6 +171,7 @@ const Index = () => {
                 dataSource={dataSource}
                 columns={columns}
                 pagination={false}
+                scroll={{ y: 125 }}
               />
             </div>
             <div className="card-colleges">

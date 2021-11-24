@@ -91,10 +91,9 @@
     padding: 21px 26px 12px 15px;
     position: fixed;
     width: 100%;
-    padding-left: 254px;
+    padding-left: 250px;
     z-index: 1;
-
-    .ant-dropdown-link,
+    border-bottom: 1px solid #E2E2E2;
     a {
       color: #04041c;
       text-decoration: none;
@@ -111,8 +110,13 @@
   }
   hr {
     width: 1057px;
-  //   height: 0px;
+    //   height: 0px;
     border: 1px solid #e6e6e6;
     opacity: 1;
+  }
+}
+.ant-dropdown-menu-title-content {
+  a {
+    text-decoration: none;
   }
 }
