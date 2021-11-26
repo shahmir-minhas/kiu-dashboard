@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import { Table, Button, Input, Dropdown, Select } from "antd";
+import { Table} from "antd";
+import { Link } from "react-router-dom";
+import TableTopBar from "../../Components/Common/TableTopBar";
 
-import { ReactComponent as FilterIcon } from "../../Assets/Icons/Icon material-filter-list.svg";
-import { ReactComponent as ExportIcon } from "../../Assets/Icons/Icon awesome-file-export.svg";
 import "../../Styles/Pages/_studyingStudents.scss";
 
-const { Search } = Input;
-const { Option } = Select;
-
 const StudyingStudents = () => {
+
   const dataSource = [
     {
       key: "1",
@@ -50,7 +48,7 @@ const StudyingStudents = () => {
       key: "4",
       serialNo: 1,
       id: "0155",
-      name: "Shahmir",
+      name: "ali",
       iqamaCountry: "Pakistan",
       college: "English",
       scholarship: "Full",
@@ -74,7 +72,7 @@ const StudyingStudents = () => {
       key: "6",
       serialNo: 1,
       id: "0155",
-      name: "Shahmir",
+      name: "ali",
       iqamaCountry: "Pakistan",
       college: "English",
       scholarship: "Full",
@@ -109,9 +107,40 @@ const StudyingStudents = () => {
     },
     {
       title: "Name",
-      dataIndex: "name",
+      // dataIndex: "name",
       key: "name",
+      render: (data) => <Link to={`/student-details/${data.id}`}>{data.name}</Link>,
     },
+    //   filters: [
+    //     {
+    //       text: "ali",
+    //       value: "ali",
+    //     },
+    //     {
+    //       text: "Jim",
+    //       value: "shahmir",
+    //     },
+    //     {
+    //       text: "Submenu",
+    //       value: "Submenu",
+    //       children: [
+    //         {
+    //           text: "Green",
+    //           value: "Green",
+    //         },
+    //         {
+    //           text: "Black",
+    //           value: "Black",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    //   onFilter: (value, record) =>
+    //     record.name
+    //       .toString()
+    //       .toLowerCase()
+    //       .includes(value.toString().toLowerCase()),
+    // },
     {
       title: "Iqama Country",
       dataIndex: "iqamaCountry",
@@ -144,57 +173,14 @@ const StudyingStudents = () => {
       align: "right",
     },
   ];
-  
-  const menu = (
-    <div className="filter-dropdown">
-      <p>CGPA Range</p>
-      <h6>Scholarship</h6>
-      <Select defaultValue="Scholarship">
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-        <Option value="Yiminghe">yiminghe</Option>
-      </Select>
-      <h6>Country</h6>
-      <Select defaultValue="Saudia Arabia">
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-        <Option value="Yiminghe">yiminghe</Option>
-      </Select>
-      <h6>Major</h6>
-      <Select defaultValue="Islamic Sharia">
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-        <Option value="Yiminghe">yiminghe</Option>
-      </Select>
-    </div>
-  );
+
+
   return (
     <React.Fragment>
       <div className="studying-students-wrapper">
         <h6>Studying Students</h6>
         <div className="students-table">
-          <div className="d-flex justify-content-between">
-            <div className="d-flex">
-              <h6 className="me-4">
-                Students enrolled:{" "}
-                <span className="ms-2">{dataSource.length}</span>
-              </h6>
-
-              <Dropdown overlay={menu} trigger={["click"]}>
-                <Button className="btn-filter ant-dropdown-link">
-                  Filter
-                  <FilterIcon className="ms-2" />
-                </Button>
-              </Dropdown>
-            </div>
-            <div className="d-flex pb-2">
-              <Button className="btn-export me-3">
-                <ExportIcon className="me-2" />
-                Export
-              </Button>
-              <Search className="input-search" />
-            </div>
-          </div>
+        <TableTopBar totalItems={dataSource.length}/>
           <Table
             dataSource={dataSource}
             columns={columns}
@@ -207,6 +193,7 @@ const StudyingStudents = () => {
             }}
           />
         </div>
+        
       </div>
     </React.Fragment>
   );

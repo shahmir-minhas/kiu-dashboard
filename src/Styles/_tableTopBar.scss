@@ -1,0 +1,95 @@
+.table-top-bar {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #cecece29;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+  margin-top: 30px;
+  padding: 18px 27px 0px 30px;
+  h6 {
+    font-size: 16px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .btn-filter {
+    width: 88px;
+    height: 34px;
+    background: #f2f2f2 0% 0% no-repeat padding-box;
+    border-radius: 4px 4px 0px 0px;
+    opacity: 1;
+    font-size: 14px;
+    color: #000000;
+  }
+
+  .btn-export {
+    width: 98px;
+    height: 34px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 14px;
+    color: #000000;
+  }
+  .input-search {
+    width: 237px;
+    height: 34px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    opacity: 1;
+  }
+}
+.filter-dropdown {
+  width: 257px;
+  height: 412px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d4d4d4;
+  border-radius: 0px 4px 4px 4px;
+  opacity: 1;
+  padding: 24px 22px 16px;
+  h6 {
+    font-size: 14px;
+  }
+  label {
+    font-size: 12px;
+    color: #afafaf;
+  }
+  .filter-cgpa-input {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    width: 74px;
+    height: 34px;
+    font-size: 14px;
+    color: #101010;
+    text-align: center;
+  }
+  .select-input {
+    width: 210px;
+    height: 34px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    opacity: 1;
+  }
+  .btn-cancel {
+    width: 86px;
+    height: 34px;
+    border: 1px solid var(--unnamed-color-2f2f75);
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #2f2f75;
+    border-radius: 4px;
+    opacity: 1;
+    color: #2F2F75;
+  }
+  .btn-apply {
+    width: 86px;
+    height: 34px;
+    background: var(--unnamed-color-089752) 0% 0% no-repeat padding-box;
+    background: #089752 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    color: #ffffff;
+  }
+}

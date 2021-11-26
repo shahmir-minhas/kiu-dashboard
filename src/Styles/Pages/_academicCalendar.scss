@@ -1,0 +1,26 @@
+.academic-calendar-wrapper {
+  padding: 79px 24px 0 254px;
+  background: #f8f8f8 0% 0% no-repeat padding-box;
+  height: 100vh;
+  .card-calender {
+    height: 632px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #cecece29;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    opacity: 1;
+    margin-top: 28px;
+    padding: 26px 37px;
+    h6 {
+      font-size: 18px;
+      color: #04041c;
+      font-weight: bold;
+      margin: 0;
+    }
+    p {
+      font-size: 14px;
+      color: #191919;
+      margin: 0;
+    }
+  }
+}

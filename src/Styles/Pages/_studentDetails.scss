@@ -1,0 +1,274 @@
+$darkColor: #04041c;
+@mixin card-bg {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  opacity: 1;
+}
+@mixin grade {
+  width: 34px;
+  height: 13px;
+  border-radius: 4px;
+  opacity: 1;
+}
+@mixin card-bg-shadow {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #85858529;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.student-details-wrapper {
+  padding: 79px 24px 0 254px;
+  background: #f8f8f8 0% 0% no-repeat padding-box;
+  height: 100vh;
+  a {
+    font-size: 18px;
+    color: #2f2f75;
+    text-decoration: none;
+    margin-top: 27px;
+  }
+  h6 {
+    font-size: 14px;
+    color: $darkColor;
+  }
+
+  .select-export {
+    p {
+      font-size: 14px;
+      margin: 0 0 7px 0;
+    }
+    .all-semester-select {
+      width: 156px;
+      height: 34px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #cbcbcb;
+      border-radius: 4px;
+      opacity: 1;
+      font-size: 14px;
+    }
+    .export-btn {
+      width: 124px;
+      height: 34px;
+      border: 1px solid var(--unnamed-color-2f2f75);
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #2f2f75;
+      border-radius: 4px;
+      opacity: 1;
+      color: #2f2f75;
+      font-size: 11px;
+    }
+  }
+  .card-student-info {
+    height: 155px;
+    @include card-bg;
+    padding: 17px 38px 25px 30px;
+    margin-top: 27px;
+    h6 {
+      margin: 0;
+    }
+
+    .vertical-line {
+      width: 1px;
+      height: 43px;
+    }
+    .email {
+      font-size: 10px;
+      color: $darkColor;
+    }
+    p {
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 3px;
+      color: $darkColor;
+      //   font-weight: bold;
+    }
+    .right-flex {
+      span {
+        font-size: 12px;
+        color: #4f4f58;
+        margin-bottom: 5px;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+    .bottom-line {
+      margin-top: 28px;
+      p {
+        font-size: 12px;
+        color: $darkColor;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  .card-result {
+    @include card-bg;
+    height: 1351px;
+    padding: 29px 38px 25px 32px;
+    margin-top: 30px;
+    .qualification {
+      h6 {
+        font-size: 12px;
+        margin: 15px 0 3px;
+      }
+      p {
+        font-size: 11px;
+        margin: 3px 0;
+        // margin-bottom: 5px;
+      }
+    }
+    // -----------------------------------  SUB CARDS    --------------------------------
+    .subCard-grade {
+      height: 141px;
+      @include card-bg-shadow;
+      margin: 21px 0 42px 0;
+      padding: 20px 0 50px 0;
+
+      h6 {
+        //   font-size: 16px;
+        font-weight: bold;
+        margin-top: 8px;
+        // margin-bottom: 0;
+      }
+      h6:nth-child(1) {
+        font-weight: 600;
+      }
+
+      .grade-a-plus {
+        @include grade;
+        background: #39ef6a 0% 0% no-repeat padding-box;
+      }
+      .grade-a {
+        @include grade;
+        background: #39ef6a 0% 0% no-repeat padding-box;
+      }
+      .grade-b-plus {
+        @include grade;
+        background: #b9ef39 0% 0% no-repeat padding-box;
+      }
+      .grade-b {
+        @include grade;
+        background: #d4fb79 0% 0% no-repeat padding-box;
+      }
+      .grade-c-plus {
+        @include grade;
+        background: #eac100 0% 0% no-repeat padding-box;
+        opacity: 0.4;
+      }
+      .grade-c {
+        @include grade;
+        background: #fbe26c 0% 0% no-repeat padding-box;
+      }
+      .grade-d-plus {
+        @include grade;
+        background: #f8990b 0% 0% no-repeat padding-box;
+      }
+      .grade-d {
+        @include grade;
+        background: #f5c071 0% 0% no-repeat padding-box;
+      }
+      .grade-f {
+        @include grade;
+        background: #ef3939 0% 0% no-repeat padding-box;
+      }
+      tr {
+        .ant-table-cell {
+          font-size: 11px;
+          color: #04041c;
+          padding: 5px 20px;
+          //   border-top: 1px solid #f0f0f0;
+          //   border-bottom: 1px solid #f0f0f0;
+          p {
+            margin: 0;
+          }
+        }
+
+        .ant-table-cell:nth-child(1) {
+          padding-left: 26px;
+        }
+        .ant-table-cell:last-child {
+          padding-right: 27px;
+        }
+      }
+      tr:last-child {
+        border-bottom: none !important;
+      }
+      thead {
+        .ant-table-cell {
+          //   font-size: 12px;
+          //   color: #686874;
+          padding: 12px 0 5px 0;
+          background-color: #ffffff;
+        }
+      }
+    }
+    .subCard-semester {
+      @include card-bg-shadow;
+      height: 367px;
+      margin-top: 15px;
+      padding: 16px 32px 57px 26px;
+      tr {
+        .ant-table-cell {
+          font-size: 14px;
+          color: #04041c;
+          padding: 12px 5px 12px;
+          height: 45px;
+        }
+
+        .ant-table-cell:nth-child(1) {
+          padding-left: 26px;
+        }
+        .ant-table-cell:last-child {
+          padding-right: 27px;
+        }
+      }
+      tr:last-child {
+        border-bottom: none !important;
+      }
+      thead {
+        .ant-table-cell {
+          font-size: 14px;
+          // color: #686874;
+          padding: 12px 0 5px 0;
+          background-color: #ffffff;
+        }
+      }
+    }
+    .subCard-academic-record {
+      @include card-bg-shadow;
+      height: 473px;
+      margin-top: 15px;
+      padding: 16px 41px 24px 31px;
+      
+      tr {
+        .ant-table-cell {
+          font-size: 14px;
+          color: #04041c;
+          padding: 12px 5px 12px;
+          height: 45px;
+        }
+
+        .ant-table-cell:nth-child(1) {
+          padding-left: 26px;
+        }
+        .ant-table-cell:last-child {
+          padding-right: 27px;
+        }
+      }
+      tr:last-child {
+        border-bottom: none !important;
+      }
+      thead {
+        .ant-table-cell {
+          font-size: 14px;
+          // color: #686874;
+          padding: 12px 0 5px 0;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
-import React, { Component, useState } from "react";
-import { Select, Table, Button, Dropdown, Input } from "antd";
+import React, { Component } from "react";
 
-import { ReactComponent as FilterIcon } from "../../Assets/Icons/Icon material-filter-list.svg";
-import { ReactComponent as ExportIcon } from "../../Assets/Icons/Icon awesome-file-export.svg";
+import {Link} from 'react-router-dom';
+import { Select, Table } from "antd";
+
 import "../../Styles/Pages/_graduateStudents.scss";
+import TableTopBar from "../../Components/Common/TableTopBar";
 
 const { Option } = Select;
-const { Search } = Input;
 
 const GraduteStudents = () => {
   const dataSource = [
@@ -24,7 +24,7 @@ const GraduteStudents = () => {
     },
     {
       key: "2",
-      serialNo: 1,
+      serialNo: 2,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -36,7 +36,7 @@ const GraduteStudents = () => {
     },
     {
       key: "3",
-      serialNo: 1,
+      serialNo: 3,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -48,7 +48,7 @@ const GraduteStudents = () => {
     },
     {
       key: "4",
-      serialNo: 1,
+      serialNo: 4,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -60,7 +60,7 @@ const GraduteStudents = () => {
     },
     {
       key: "5",
-      serialNo: 1,
+      serialNo: 5,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -72,7 +72,7 @@ const GraduteStudents = () => {
     },
     {
       key: "6",
-      serialNo: 1,
+      serialNo: 6,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -84,7 +84,7 @@ const GraduteStudents = () => {
     },
     {
       key: "7",
-      serialNo: 1,
+      serialNo: 7,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -96,7 +96,7 @@ const GraduteStudents = () => {
     },
     {
       key: "8",
-      serialNo: 1,
+      serialNo: 8,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -108,7 +108,7 @@ const GraduteStudents = () => {
     },
     {
       key: "9",
-      serialNo: 1,
+      serialNo: 9,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -120,7 +120,7 @@ const GraduteStudents = () => {
     },
     {
       key: "10",
-      serialNo: 1,
+      serialNo: 10,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -132,7 +132,7 @@ const GraduteStudents = () => {
     },
     {
       key: "11",
-      serialNo: 1,
+      serialNo: 11,
       id: "0155",
       name: "Shahmir",
       iqamaCountry: "Pakistan",
@@ -157,7 +157,8 @@ const GraduteStudents = () => {
     },
     {
       title: "Name",
-      dataIndex: "name",
+      //   dataIndex: "name",
+      render: (data) => <Link to={`/student-details/${data.id}`}>{data.name}</Link>,
       key: "name",
     },
     {
@@ -192,7 +193,6 @@ const GraduteStudents = () => {
       align: "right",
     },
   ];
-  
   //   function showTotal(total) {
   //     return `Showing: 7 of ${total}`;
   //   }
@@ -206,10 +206,6 @@ const GraduteStudents = () => {
   //     return originalElement;
   //   }
 
-  function onShowSizeChange(current, pageSize) {
-    console.log(current, pageSize);
-  }
-  
   return (
     <React.Fragment>
       <div className="graduate-students-wrapper">
@@ -223,34 +219,14 @@ const GraduteStudents = () => {
         </Select>
 
         <div className="students-table">
-          <div className="d-flex justify-content-between">
-            <div className="d-flex">
-              <h6 className="me-4">
-                Students enrolled:{" "}
-                <span className="ms-2">{dataSource.length}</span>
-              </h6>
-
-              {/* <Dropdown overlay={menu}> */}
-              <Button className="btn-filter ant-dropdown-link">
-                Filter
-                <FilterIcon className="ms-2" />
-              </Button>
-              {/* </Dropdown> */}
-            </div>
-            <div className="d-flex pb-2">
-              <Button className="btn-export me-3">
-                <ExportIcon className="me-2" />
-                Export
-              </Button>
-              <Search className="input-search" />
-            </div>
-          </div>
+        <TableTopBar totalItems={dataSource.length}/>
           <Table
             dataSource={dataSource}
             columns={columns}
             pagination={{
               pageSize: 6,
-              showTotal: (total, currentSize) => `Showing: ${currentSize[1]} of ${total}`,
+              showTotal: (total, currentSize) =>
+                `Showing: ${currentSize[1]} of ${total}`,
               size: "small",
               hideOnSinglePage: true,
             }}
