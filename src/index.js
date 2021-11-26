@@ -8,11 +8,14 @@ import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import "bootstrap/dist/css/bootstrap.min.css"; // bootstrap css
 import "bootstrap/dist/js/bootstrap.bundle.js"; // bootstrap js
 import "./Styles/_typography.scss";
+import UserProvider from "./Context/UserContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

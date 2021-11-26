@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
@@ -15,6 +15,27 @@ import Logout from "../Assets/Icons/Icon open-account-logout.png";
 import "../Styles/Pages/_layout.scss";
 
 const Layout = (props) => {
+  let listener = null;
+  const [scrollState, setScrollState] = useState(false);
+
+  useEffect(() => {
+    listener = document.addEventListener("scroll", (e) => {
+      var scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 20) {
+        if (scrollState !== true) {
+          setScrollState(true);
+        }
+      } else {
+        if (scrollState !== false) {
+          setScrollState(false);
+        }
+      }
+    });
+    return () => {
+      document.removeEventListener("scroll", listener);
+    };
+  }, [scrollState]);
+
   const sidebarLinks = [
     { icon: HomeIcon, title: "Dashboard", url: "/home" },
     {
@@ -71,7 +92,11 @@ const Layout = (props) => {
           </div>
         </aside>
 
-        <div className="top-bar d-flex justify-content-between flex-grow-1">
+        <div
+          className={`top-bar d-flex justify-content-between flex-grow-1 ${
+            scrollState ? "top-bar-scrolled" : ""
+          }`}
+        >
           <div className="d-flex">
             <img src={Profile} alt="" className="me-2" />
             <h5 className="me-5">Hi, Shahmir!</h5>
@@ -87,12 +112,14 @@ const Layout = (props) => {
             </div>
           </div>
           <div>
-            <Button>
-              <span className="me-2">
-                <img src={Logout} alt="" />
-              </span>
-              Logout
-            </Button>
+            <Link to="/login">
+              <Button>
+                <span className="me-2">
+                  <img src={Logout} alt="" />
+                </span>
+                Logout
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>

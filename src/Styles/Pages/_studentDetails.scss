@@ -216,6 +216,9 @@ $darkColor: #04041c;
           color: #04041c;
           padding: 12px 5px 12px;
           height: 45px;
+          span {
+            color: #c1c1c1;
+          }
         }
 
         .ant-table-cell:nth-child(1) {
@@ -240,9 +243,9 @@ $darkColor: #04041c;
     .subCard-academic-record {
       @include card-bg-shadow;
       height: 473px;
-      margin-top: 15px;
+      margin-top: 30px;
       padding: 16px 41px 24px 31px;
-      
+
       tr {
         .ant-table-cell {
           font-size: 14px;
@@ -250,23 +253,104 @@ $darkColor: #04041c;
           padding: 12px 5px 12px;
           height: 45px;
         }
+      }
+      // tr:last-child {
+      //   border-bottom: none !important;
+      // }
 
-        .ant-table-cell:nth-child(1) {
-          padding-left: 26px;
-        }
-        .ant-table-cell:last-child {
-          padding-right: 27px;
-        }
-      }
-      tr:last-child {
-        border-bottom: none !important;
-      }
       thead {
         .ant-table-cell {
           font-size: 14px;
           // color: #686874;
           padding: 12px 0 5px 0;
           background-color: #ffffff;
+        }
+      }
+
+      .grade-a-plus {
+        @include grade;
+        background: #39ef6a 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-a {
+        @include grade;
+        background: #39ef6a 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-b-plus {
+        @include grade;
+        background: #b9ef39 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-b {
+        @include grade;
+        background: #d4fb79 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-c-plus {
+        @include grade;
+        background: #eac100 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+        opacity: 0.4;
+      }
+      .grade-c {
+        @include grade;
+        background: #fbe26c 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-d-plus {
+        @include grade;
+        background: #f8990b 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-d {
+        @include grade;
+        background: #f5c071 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+      .grade-f {
+        @include grade;
+        background: #ef3939 0% 0% no-repeat padding-box;
+        width: 21px;
+        height: 9px;
+      }
+
+      .ant-table-cell:nth-child(1) {
+        padding-left: 26px;
+      }
+      .ant-table-cell:last-child {
+        padding-right: 27px;
+      }
+    }
+    .academic-avg-record {
+      // width: 85%;
+      thead {
+        .ant-table-cell {
+          background: #f8f8f8 0% 0% no-repeat padding-box;
+        }
+        tr {
+          .ant-table-cell:last-child {
+            padding-right: 170px;
+            padding-left: 50px;
+            width: 100px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          .ant-table-cell:last-child {
+            padding-right: 170px;
+            padding-left: 50px;
+            width: 100px;
+          }
         }
       }
     }

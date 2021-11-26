@@ -81,7 +81,7 @@
     border: 1px solid #2f2f75;
     border-radius: 4px;
     opacity: 1;
-    color: #2F2F75;
+    color: #2f2f75;
   }
   .btn-apply {
     width: 86px;
@@ -91,5 +91,11 @@
     border-radius: 4px;
     opacity: 1;
     color: #ffffff;
+  }
+  .ant-dropdown-menu-item-active {
+    background: #ffffff 0% 0% no-repeat padding-box;
+  }
+  .ant-dropdown-menu-item:hover {
+    background: #ffffff 0% 0% no-repeat padding-box;
   }
 }

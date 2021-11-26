@@ -8,20 +8,25 @@ import AcademicCalendar from "./Pages/AcademicCylendar/AcademicCalendar";
 import StudentDetails from "./Pages/StudentDetails/StudentDetails";
 
 import Layout from "./Layout/Layout";
+import Login from "./Pages/Login/Login";
+import PrivateRoute from "./Routes/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
     <React.Fragment>
-      <Layout>
-        <Switch>
-          <Route path="/student-details/:id" component={StudentDetails} />
-          <Route path="/academic-calendar" component={AcademicCalendar} />
-          <Route path="/graduate-students" component={GraduteStudents} />
-          <Route path="/studying-students" component={StudyingStudents} />
-          <Route path="/home" component={Index} />
-          <Redirect exact from="/" to="/home" component={Index} />
-        </Switch>
-      </Layout>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <PrivateRoute>
+          <Layout>
+            <Route path="/student-details/:id" component={StudentDetails} />
+            <Route path="/academic-calendar" component={AcademicCalendar} />
+            <Route path="/graduate-students" component={GraduteStudents} />
+            <Route path="/studying-students" component={StudyingStudents} />
+            <Route path="/home" component={Index} />
+            <Redirect exact from="/" to="/home" component={Index} />
+          </Layout>
+        </PrivateRoute>
+      </Switch>
     </React.Fragment>
   );
 }
