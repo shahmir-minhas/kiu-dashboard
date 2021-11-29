@@ -3,8 +3,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Table, Select, Button } from "antd";
 import { ReactComponent as ExportIcon } from "../../Assets/Icons/Icon awesome-file-export-blue.svg";
+import CurrentSemester from "./CurrentSemester";
 
 import "../../Styles/Pages/_studentDetails.scss";
+import AcademicRecord from "./AcademicRecord";
 
 const { Option } = Select;
 
@@ -39,133 +41,7 @@ const StudentDetails = (props) => {
       gradeF: "0-1",
     },
   ];
-  // SEMESTER RESULTS DATASORUCE
-  const semesterResult = [
-    {
-      key: "1",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "2",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "3",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "4",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "5",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "6",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-  ];
-  // ACADEMIC RESULTS DATASOURCE
-  const academicRecord = [
-    {
-      key: "1",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: "F",
-    },
-    {
-      key: "2",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: "A",
-    },
-    {
-      key: "3",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: "C+",
-    },
-    {
-      key: "4",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: "D",
-    },
-    {
-      key: "5",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: "A+",
-    },
-  ];
 
-  // ACADEMIC AVERAGE DATASOURCE
-  const academicAvgRecord = [
-    {
-      key: "1",
-      credits: "Quaterly",
-      registered: 19,
-      passed: 0,
-      score: 19,
-      gpa: 19,
-      avg: "57%",
-    },
-    {
-      key: "2",
-      credits: "Cumulative",
-      registered: 19,
-      passed: 0,
-      score: 19,
-      gpa: 19,
-      avg: "67%",
-    },
-  ];
   // ----------------- COLUMNS -------------------
   // Columns for Grade Table
   const gradeColumns = [
@@ -275,150 +151,7 @@ const StudentDetails = (props) => {
       align: "center",
     },
   ];
-  // SEMESTER RESULTS COLUMNS
-  const semesterColumns = [
-    {
-      title: "Course Code",
-      dataIndex: "courseCode",
-      key: "courseCode",
-    },
-    {
-      title: "Course Name",
-      dataIndex: "courseName",
-      key: "courseName",
-    },
-    {
-      title: "Division",
-      dataIndex: "division",
-      key: "division",
-    },
-    {
-      title: "Credits",
-      dataIndex: "credits",
-      key: "credits",
-      align: "center",
-    },
-    {
-      title: "Created",
-      dataIndex: "created",
-      key: "created",
-      align: "right",
-    },
-    {
-      title: "Updated",
-      dataIndex: "updated",
-      key: "updated",
-      align: "right",
-    },
-  ];
-  // ACADEMIC RESULTS COLUMNS
-  const recordColumns = [
-    {
-      title: "Course Code",
-      dataIndex: "courseCode",
-      key: "courseCode",
-    },
-    {
-      title: "Course Name",
-      dataIndex: "courseName",
-      key: "courseName",
-    },
-    {
-      title: "Division",
-      dataIndex: "division",
-      key: "division",
-    },
-    {
-      title: "Credits",
-      dataIndex: "credits",
-      key: "credits",
-      align: "center",
-      width: 150,
-    },
-    {
-      title: "GPA",
-      dataIndex: "gpa",
-      key: "gpa",
-      align: "center",
-      width: 150,
-    },
-    {
-      title: "Grade",
-      // dataIndex: "grade",
-      key: "grade",
-      render: (data) => (
-        <div className="d-flex mx-auto justify-content-around align-items-center">
-          {data.grade}
-          <div
-            className={`grade-${
-              data.grade === "A+"
-                ? "a-plus"
-                : data.grade === "A"
-                ? "a"
-                : data.grade === "B+"
-                ? "b-plus"
-                : data.grade === "B"
-                ? "b"
-                : data.grade === "C+"
-                ? "c-plus"
-                : data.grade === "C"
-                ? "c"
-                : data.grade === "D+"
-                ? "d-plus"
-                : data.grade === "D"
-                ? "d"
-                : "f"
-            }`}
-          ></div>
-        </div>
-      ),
-      align: "center",
-    },
-  ];
 
-  // ACADEMIC AVERAGE COLUMNs
-  const academicAvgColumns = [
-    {
-      title: "Credits",
-      dataIndex: "credits",
-      key: "credits",
-      align: "left",
-    },
-    {
-      title: "Registered",
-      dataIndex: "registered",
-      key: "registered",
-      align: "center",
-    },
-    {
-      title: "passed",
-      dataIndex: "passed",
-      key: "passed",
-      align: "center",
-    },
-    {
-      title: "score",
-      dataIndex: "score",
-      key: "score",
-      align: "center",
-      width: 100,
-    },
-    {
-      title: "GPA",
-      dataIndex: "gpa",
-      key: "gpa",
-      align: "center",
-    },
-    {
-      title: "Average",
-      dataIndex: "avg",
-      key: "avg",
-      align: "right",
-    },
-  ];
-
-  // console.log(props);
-  // console.log(props.match.params.id);
   return (
     <React.Fragment>
       <div className="student-details-wrapper">
@@ -442,7 +175,6 @@ const StudentDetails = (props) => {
                 <span>Semester</span>
                 <p>1st</p>
               </div>
-
               <div className="vertical-line border"></div>
               <div className="px-5">
                 <span>CGPA</span>
@@ -502,7 +234,6 @@ const StudentDetails = (props) => {
                 <Option>Semester d</Option>
               </Select>
             </div>
-
             <Button
               className="export-btn"
               icon={<ExportIcon className="me-1" />}
@@ -511,32 +242,8 @@ const StudentDetails = (props) => {
             </Button>
           </div>
           {/* Current semester and academic record & average */}
-          <div className="subCard-semester">
-            <h6 className="text-center">
-              Current semester Result card ( 2020/2021 Spring Semester )
-            </h6>
-            <Table
-              dataSource={semesterResult}
-              columns={semesterColumns}
-              pagination={false}
-            />
-          </div>
-          <div className="subCard-academic-record">
-            <h6 className="text-center">
-              Reported academic record 2009/2010 Fall Semester
-            </h6>
-            <Table
-              dataSource={academicRecord}
-              columns={recordColumns}
-              pagination={false}
-            />
-            <Table
-              dataSource={academicAvgRecord}
-              columns={academicAvgColumns}
-              pagination={false}
-              className="academic-avg-record"
-            />
-          </div>
+          <CurrentSemester />
+          <AcademicRecord />
         </div>
       </div>
     </React.Fragment>
