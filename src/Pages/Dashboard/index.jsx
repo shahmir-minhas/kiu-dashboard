@@ -98,9 +98,9 @@ const Index = () => {
             <div className="row">
               <div className="col-4 card-student">
                 <h6>Students</h6>
-                <div className="d-flex justify-content-center">
-                  <Student className="me-5 mt-3" />
-                  <div>
+                <div className="d-flex justify-content-around">
+                  <Student className="ms-4 mt-3" />
+                  <div className="me-5">
                     <p>258</p>
                     <span>Total</span>
                   </div>

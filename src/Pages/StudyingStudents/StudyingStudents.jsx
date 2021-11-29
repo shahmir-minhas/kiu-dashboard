@@ -107,40 +107,9 @@ const StudyingStudents = () => {
     },
     {
       title: "Name",
-      // dataIndex: "name",
       key: "name",
       render: (data) => <Link to={`/student-details/${data.id}`}>{data.name}</Link>,
     },
-    //   filters: [
-    //     {
-    //       text: "ali",
-    //       value: "ali",
-    //     },
-    //     {
-    //       text: "Jim",
-    //       value: "shahmir",
-    //     },
-    //     {
-    //       text: "Submenu",
-    //       value: "Submenu",
-    //       children: [
-    //         {
-    //           text: "Green",
-    //           value: "Green",
-    //         },
-    //         {
-    //           text: "Black",
-    //           value: "Black",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    //   onFilter: (value, record) =>
-    //     record.name
-    //       .toString()
-    //       .toLowerCase()
-    //       .includes(value.toString().toLowerCase()),
-    // },
     {
       title: "Iqama Country",
       dataIndex: "iqamaCountry",

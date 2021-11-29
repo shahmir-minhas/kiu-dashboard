@@ -23,7 +23,7 @@ function App() {
             <Route path="/graduate-students" component={GraduteStudents} />
             <Route path="/studying-students" component={StudyingStudents} />
             <Route path="/home" component={Index} />
-            <Redirect exact from="/" to="/home" component={Index} />
+            <Redirect from="/" to="/home" component={Index} />
           </Layout>
         </PrivateRoute>
       </Switch>

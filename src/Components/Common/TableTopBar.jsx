@@ -28,7 +28,7 @@ const TableTopBar = ({ totalItems }) => {
   //   };
 
   const handleFilter = () => {
-    setvisible(true);
+    setvisible(!visible);
     console.log("handlefilter");
   };
 

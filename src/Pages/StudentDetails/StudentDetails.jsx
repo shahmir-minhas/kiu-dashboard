@@ -9,6 +9,7 @@ import "../../Styles/Pages/_studentDetails.scss";
 const { Option } = Select;
 
 const StudentDetails = (props) => {
+  // ----------------- DATA SOURCES -------------------
   // Data Source for Grade Table
   const gradeDataSource = [
     {
@@ -38,6 +39,134 @@ const StudentDetails = (props) => {
       gradeF: "0-1",
     },
   ];
+  // SEMESTER RESULTS DATASORUCE
+  const semesterResult = [
+    {
+      key: "1",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      created: <span>2021-01-27 15:38:31</span>,
+      updated: <span>2021-01-27 15:38:31</span>,
+    },
+    {
+      key: "2",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      created: <span>2021-01-27 15:38:31</span>,
+      updated: <span>2021-01-27 15:38:31</span>,
+    },
+    {
+      key: "3",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      created: <span>2021-01-27 15:38:31</span>,
+      updated: <span>2021-01-27 15:38:31</span>,
+    },
+    {
+      key: "4",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      created: <span>2021-01-27 15:38:31</span>,
+      updated: <span>2021-01-27 15:38:31</span>,
+    },
+    {
+      key: "5",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      created: <span>2021-01-27 15:38:31</span>,
+      updated: <span>2021-01-27 15:38:31</span>,
+    },
+    {
+      key: "6",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      created: <span>2021-01-27 15:38:31</span>,
+      updated: <span>2021-01-27 15:38:31</span>,
+    },
+  ];
+  // ACADEMIC RESULTS DATASOURCE
+  const academicRecord = [
+    {
+      key: "1",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      gpa: "3",
+      grade: "F",
+    },
+    {
+      key: "2",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      gpa: "3",
+      grade: "A",
+    },
+    {
+      key: "3",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      gpa: "3",
+      grade: "C+",
+    },
+    {
+      key: "4",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      gpa: "3",
+      grade: "D",
+    },
+    {
+      key: "5",
+      courseCode: "10000201",
+      courseName: "المدخل لعلوم الحديث الشريف",
+      division: "First",
+      credits: 3,
+      gpa: "3",
+      grade: "A+",
+    },
+  ];
+
+  // ACADEMIC AVERAGE DATASOURCE
+  const academicAvgRecord = [
+    {
+      key: "1",
+      credits: "Quaterly",
+      registered: 19,
+      passed: 0,
+      score: 19,
+      gpa: 19,
+      avg: "57%",
+    },
+    {
+      key: "2",
+      credits: "Cumulative",
+      registered: 19,
+      passed: 0,
+      score: 19,
+      gpa: 19,
+      avg: "67%",
+    },
+  ];
+  // ----------------- COLUMNS -------------------
   // Columns for Grade Table
   const gradeColumns = [
     {
@@ -146,63 +275,7 @@ const StudentDetails = (props) => {
       align: "center",
     },
   ];
-  // SEMESTER RESULTS DATA AND COLUMNS
-  const semesterResult = [
-    {
-      key: "1",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "2",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "3",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "4",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "5",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-    {
-      key: "6",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      created: <span>2021-01-27 15:38:31</span>,
-      updated: <span>2021-01-27 15:38:31</span>,
-    },
-  ];
+  // SEMESTER RESULTS COLUMNS
   const semesterColumns = [
     {
       title: "Course Code",
@@ -238,74 +311,7 @@ const StudentDetails = (props) => {
       align: "right",
     },
   ];
-  // ACADEMIC RESULTS DATA AND COLUMNS
-  const academicRecord = [
-    {
-      key: "1",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: (
-        <div className="d-flex mx-auto justify-content-center align-items-center">
-          F <div className="grade-f ms-2"></div>
-        </div>
-      ),
-    },
-    {
-      key: "2",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: (
-        <div className="d-flex mx-auto justify-content-center align-items-center">
-          A+ <div className="grade-a-plus ms-"></div>
-        </div>
-      ),
-    },
-    {
-      key: "3",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: (
-        <div className="d-flex mx-auto justify-content-center align-items-center">
-          C+ <div className="grade-c-plus ms-1"></div>
-        </div>
-      ),
-    },
-    {
-      key: "4",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: (
-        <div className="d-flex mx-auto justify-content-center align-items-center">
-          F <div className="grade-f ms-2"></div>
-        </div>
-      ),
-    },
-    {
-      key: "5",
-      courseCode: "10000201",
-      courseName: "المدخل لعلوم الحديث الشريف",
-      division: "First",
-      credits: 3,
-      gpa: "3",
-      grade: (
-        <div className="d-flex mx-auto justify-content-center align-items-center">
-          D <div className="grade-d ms-2"></div>
-        </div>
-      ),
-    },
-  ];
+  // ACADEMIC RESULTS COLUMNS
   const recordColumns = [
     {
       title: "Course Code",
@@ -338,32 +344,39 @@ const StudentDetails = (props) => {
     },
     {
       title: "Grade",
-      dataIndex: "grade",
+      // dataIndex: "grade",
       key: "grade",
+      render: (data) => (
+        <div className="d-flex mx-auto justify-content-around align-items-center">
+          {data.grade}
+          <div
+            className={`grade-${
+              data.grade === "A+"
+                ? "a-plus"
+                : data.grade === "A"
+                ? "a"
+                : data.grade === "B+"
+                ? "b-plus"
+                : data.grade === "B"
+                ? "b"
+                : data.grade === "C+"
+                ? "c-plus"
+                : data.grade === "C"
+                ? "c"
+                : data.grade === "D+"
+                ? "d-plus"
+                : data.grade === "D"
+                ? "d"
+                : "f"
+            }`}
+          ></div>
+        </div>
+      ),
       align: "center",
     },
   ];
-  // ACADEMIC AVERAGE DATA AND COLUMNS
-  const academicAvgRecord = [
-    {
-      key: "1",
-      credits: "Quaterly",
-      registered: 19,
-      passed: 0,
-      score: 19,
-      gpa: 19,
-      avg: "57%",
-    },
-    {
-      key: "2",
-      credits: "Cumulative",
-      registered: 19,
-      passed: 0,
-      score: 19,
-      gpa: 19,
-      avg: "67%",
-    },
-  ];
+
+  // ACADEMIC AVERAGE COLUMNs
   const academicAvgColumns = [
     {
       title: "Credits",
